@@ -14,7 +14,7 @@ export class StoreComponent {
     constructor(private repository: ProductRepository) {}
 
     get products(): Product[] {
-        let pageIndex = (this.selectedPage - 1) * this.productsPerPage
+        const pageIndex = (this.selectedPage - 1) * this.productsPerPage;
         return this.repository.getProducts(this.selectedCategory)
             .slice(pageIndex, pageIndex + this.productsPerPage);
     }
@@ -41,9 +41,9 @@ export class StoreComponent {
             .getProducts(this.selectedCategory).length / this.productsPerPage)
     }
 
-    //get pageNumbers(): number[] {
+    // get pageNumbers(): number[] {
     //    return Array(Math.ceil(this.repository
     //        .getProducts(this.selectedCategory).length / this.productsPerPage))
     //            .fill(0).map((x, i) => i + 1);
-    //}
+    // }
 }

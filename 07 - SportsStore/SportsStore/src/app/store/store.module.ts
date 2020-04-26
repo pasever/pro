@@ -6,8 +6,8 @@ import { StoreComponent } from "./store.component";
 import { CounterDirective } from "./counter.directive";
 
 @NgModule({
-    imports: [ModelModule, BrowserModule, FormsModule],
-    declarations: [StoreComponent, CounterDirective],
-    exports: [StoreComponent]
+    imports: [ ModelModule, BrowserModule, FormsModule ],
+    declarations: [ StoreComponent, CounterDirective ],
+    exports: [ StoreComponent ]
 })
 export class StoreModule { }

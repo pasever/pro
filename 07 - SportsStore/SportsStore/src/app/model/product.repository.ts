@@ -12,6 +12,7 @@ export class ProductRepository {
             this.products = data;
             this.categories = data.map(p => p.category)
                 .filter((c, index, array) => array.indexOf(c) == index).sort();
+                console.log(this.categories);
         });
     }
 

@@ -23,6 +23,6 @@ export class StaticDataSource {
     ];
 
     getProducts(): Observable<Product[]> {
-        return from([this.products]);
+        return from([this.products);
     }
 }
