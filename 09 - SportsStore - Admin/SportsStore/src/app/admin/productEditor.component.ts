@@ -17,6 +17,8 @@ export class ProductEditorComponent {
 
         this.editing = activeRoute.snapshot.params["mode"] == "edit";
         if (this.editing) {
+            console.log(activeRoute);
+            
             Object.assign(this.product,
                 repository.getProduct(activeRoute.snapshot.params["id"]));
         }

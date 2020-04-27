@@ -28,6 +28,7 @@ export class ProductRepository {
     getCategories(): string[] {
         return this.categories;
     }
+    
     saveProduct(product: Product) {
         if (product.id == null || product.id == 0) {
             this.dataSource.saveProduct(product)
