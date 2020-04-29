@@ -37,4 +37,8 @@ export class ProductComponent {
             this.formSubmitted = false;
         }
     }
+
+    setProductCategory(category: string) {
+        this.newProduct.category = category;
+    }
 }

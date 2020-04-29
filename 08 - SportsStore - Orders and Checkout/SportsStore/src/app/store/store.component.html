@@ -14,20 +14,20 @@
       <button *ngFor="let cat of categories" 
           class="btn btn-outline-primary btn-block"
           [class.active]="cat == selectedCategory" (click)="changeCategory(cat)">
-        {{cat}}
+        {{ cat }}
       </button>
     </div>
 
     <div class="col-9 p-2">
       <div *ngFor="let product of products" class="card m-1 p-1 bg-light">
         <h4>
-          {{product.name}}
+          {{ product.name }}
           <span class="badge badge-pill badge-primary float-right">
-            {{ product.price | currency:"USD":"symbol":"2.2-2" }}
+            {{ product.price | currency : "USD" : "symbol" : "2.2-2" }}
           </span>
         </h4>
         <div class="card-text bg-white p-1">
-          {{product.description}}
+          {{ product.description }}
           <button class="btn btn-success btn-sm float-right"
                   (click)="addProductToCart(product)">
             Add To Cart

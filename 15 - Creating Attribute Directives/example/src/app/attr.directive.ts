@@ -4,7 +4,7 @@ import { Directive, ElementRef, Attribute, Input,
 import { Product } from "./product.model";
 
 @Directive({
-selector: "[pa-attr]"
+    selector: "[pa-attr]"
 })
 export class PaAttrDirective {
 

@@ -3,7 +3,7 @@ import { Input, Output, EventEmitter, Directive,
 
 @Directive({
     selector: "input[paModel]",
-    exportAs: "paModel"
+    exportAs: "paModelVar"
 })
 export class PaModel {
 
@@ -16,6 +16,7 @@ export class PaModel {
     fieldValue: string = "";
 
     ngOnChanges(changes: { [property: string]: SimpleChange }) {
+        console.log(changes);
         let change = changes["modelProperty"];
         if (change.currentValue != this.fieldValue) {
             this.fieldValue = changes["modelProperty"].currentValue || "";
@@ -28,6 +29,7 @@ export class PaModel {
 
     @HostListener("input", ["$event.target.value"])
     updateValue(newValue: string) {
+        console.log(newValue);
         this.fieldValue = newValue;
         this.update.emit(newValue);
         this.direction = "Element";

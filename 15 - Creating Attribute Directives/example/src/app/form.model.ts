@@ -5,7 +5,12 @@ export class ProductFormControl extends FormControl {
     label: string;
     modelProperty: string;
 
-    constructor(label:string, property:string, value: any, validator: any) {
+    constructor(
+        label:string, 
+        property:string, 
+        value: any, 
+        validator: any
+    ) {
         super(value, validator);
         this.label = label;
         this.modelProperty = property;
