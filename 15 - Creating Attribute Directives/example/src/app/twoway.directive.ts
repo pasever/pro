@@ -3,7 +3,7 @@ import { Input, Output, EventEmitter, Directive,
 
 @Directive({
     selector: "input[paModel]",
-    exportAs: "paModelVar"
+    exportAs: "paModel"
 })
 export class PaModel {
 
